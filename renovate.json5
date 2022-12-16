@@ -1,0 +1,14 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'github>ng-easy/renovate-config:default',
+    ':label(dependencies)',
+  ],
+  schedule: ['at any time'],
+  automergeStrategy: 'rebase',
+  automerge: true,
+  automergeType: 'pr',
+  platformAutomerge: true,
+  prCreation: 'immediate',
+  printConfig: true,
+}

@@ -1,0 +1,25 @@
+name: Renovate
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0/15 * * * *'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  renovate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.2.0
+
+      - name: Self-hosted Renovate
+        uses: renovatebot/github-action@v34.58.1
+        env:
+          NX_CLOUD_AUTH_TOKEN: ${{ secrets.NX_CLOUD_AUTH_TOKEN }}
+          LOG_LEVEL: debug
+        with:
+          configurationFile: renovate.config.js
+          token: ${{ secrets.RENOVATE_SELF_HOSTED_TOKEN }}
