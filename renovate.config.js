@@ -8,7 +8,7 @@ module.exports = {
     repositories: ['WolfSoko/nx-renovate-self-hosted', 'WolfSoko/wol-sok-mono', 'WolfSoko/nx-clean'],
     includeForks: false,
     dependencyDashboard: true,
-    onboarding: true,
+    onboarding: false,
     autodiscover: false,
     allowCustomCrateRegistries: true,
     allowScripts: true,
