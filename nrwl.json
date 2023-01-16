@@ -118,8 +118,8 @@
           "rm -f migrations.json || true",
           "npx --no-install nx format:write",
           "npx --no-install nx workspace-lint",
-          "npx --no-install nx run-many --target=lint --all --parallel --fix --skip-nx-cache",
-          "npx --no-install nx run-many --target=test --all --parallel --skip-nx-cache"
+          "npx --no-install nx affected --target=lint --all --parallel --fix",
+          "npx --no-install nx affected --target=test --all --parallel"
         ],
         "fileFilters": [
           "**/**"

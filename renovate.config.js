@@ -24,7 +24,7 @@ module.exports = {
         '^npx --no-install nx migrate --run-migrations=migrations\\.json || true$',
         '^rm -f migrations.json || true$',
         '^npx --no-install nx workspace-lint$',
-        '^npx --no-install nx run-many --target=lint --all --parallel --fix --skip-nx-cache$',
+        '^npx --no-install nx affected --target=(lint|test) --all --parallel (--fix)?$',
         '^npx --no-install nx format:(check|write)$',
     ],
 };
