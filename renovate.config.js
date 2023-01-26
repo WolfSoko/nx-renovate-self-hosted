@@ -15,7 +15,7 @@ module.exports = {
     exposeAllEnv: true,
     allowPostUpgradeCommandTemplating: true,
     allowedPostUpgradeCommands: [
-        '^\\[ -x (.*\\.sh) ] && \\1$',
+        '^\\[ -x \\.\\/\\.github\\/scripts\\/install-ubuntu-packages\\.sh ] && \\.\\/\\.github\\/scripts\\/install-ubuntu-packages\\.sh$',
         '^npm ci --ignore-scripts$',
         '^npm run prepare --if-present$',
         '^npm run format --if-present$',
@@ -28,4 +28,4 @@ module.exports = {
         '^npx --no-install nx affected --target=(lint|test) --all --parallel (--fix)?$',
         '^npx --no-install nx format:(check|write)$',
     ],
-};
+}
