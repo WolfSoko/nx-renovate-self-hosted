@@ -15,6 +15,7 @@ module.exports = {
     exposeAllEnv: true,
     allowPostUpgradeCommandTemplating: true,
     allowedPostUpgradeCommands: [
+        '^\\[ -x (.*\\.sh) ] && \\1$',
         '^npm ci --ignore-scripts$',
         '^npm run prepare --if-present$',
         '^npm run format --if-present$',

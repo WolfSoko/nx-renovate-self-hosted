@@ -109,8 +109,10 @@
         "patch",
         "pin"
       ],
+
       "postUpgradeTasks": {
         "commands": [
+          "[ -x ./.github/scripts/install-ubuntu-packages.sh ] && ./.github/scripts/install-ubuntu-packages.sh",
           "npm ci --ignore-scripts",
           "npm run prepare --if-present",
           "npx --no-install nx migrate {{{depName}}} --from={{{depName}}}@{{{replace '^[^\\d]*' '' currentValue}}} --to={{{depName}}}@{{{replace '^[^\\d]*' '' newValue}}}",
@@ -151,6 +153,7 @@
       ],
       "postUpgradeTasks": {
         "commands": [
+          "[ -x ./.github/scripts/install-ubuntu-packages.sh ] && ./.github/scripts/install-ubuntu-packages.sh",
           "npm ci --ignore-scripts",
           "npm run prepare --if-present",
           "npx --no-install nx migrate {{{depName}}} --from={{{depName}}}@{{{replace '^[^\\d]*' '' currentValue}}} --to={{{depName}}}@{{{replace '^[^\\d]*' '' newValue}}}",
