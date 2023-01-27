@@ -112,7 +112,6 @@
 
       "postUpgradeTasks": {
         "commands": [
-          "[ -x ./.github/scripts/install-ubuntu-packages.sh ] && ./.github/scripts/install-ubuntu-packages.sh",
           "npm ci --ignore-scripts",
           "npm run prepare --if-present",
           "npx --no-install nx migrate {{{depName}}} --from={{{depName}}}@{{{replace '^[^\\d]*' '' currentValue}}} --to={{{depName}}}@{{{replace '^[^\\d]*' '' newValue}}}",
@@ -120,8 +119,7 @@
           "rm -f migrations.json || true",
           "npx --no-install nx format:write",
           "npx --no-install nx workspace-lint",
-          "npx --no-install nx affected --target=lint --all --parallel --fix",
-          "npx --no-install nx affected --target=test --all --parallel"
+          "npx --no-install nx affected --target=lint --all --parallel --fix"
         ],
         "fileFilters": [
           "**/**"
@@ -153,7 +151,6 @@
       ],
       "postUpgradeTasks": {
         "commands": [
-          "[ -x ./.github/scripts/install-ubuntu-packages.sh ] && ./.github/scripts/install-ubuntu-packages.sh",
           "npm ci --ignore-scripts",
           "npm run prepare --if-present",
           "npx --no-install nx migrate {{{depName}}} --from={{{depName}}}@{{{replace '^[^\\d]*' '' currentValue}}} --to={{{depName}}}@{{{replace '^[^\\d]*' '' newValue}}}",
