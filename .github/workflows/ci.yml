@@ -4,9 +4,8 @@ on:
   pull_request:
     branches:
       - main
+      - renovate-github/**
   push:
-    branches:
-      - main
 
 jobs:
   validate:

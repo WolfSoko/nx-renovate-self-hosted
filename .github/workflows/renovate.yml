@@ -21,5 +21,5 @@ jobs:
           NX_CLOUD_AUTH_TOKEN: ${{ secrets.NX_CLOUD_AUTH_TOKEN }}
           LOG_LEVEL: debug
         with:
-          configurationFile: renovate.config.js
+          configurationFile: .github/renovate.config.js
           token: ${{ secrets.RENOVATE_SELF_HOSTED_TOKEN }}
