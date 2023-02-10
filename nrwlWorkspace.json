@@ -52,10 +52,11 @@
       "matchUpdateTypes": ["major", "minor", "patch", "pin"],
       "postUpgradeTasks": {
         "commands": [
-          "npm install --ignore-scripts",
+          "npm ci --ignore-scripts",
           "npm run prepare --if-present",
           "bash nx-create-migrations.sh",
           "npx --no-install nx migrate {{{depName}}} --from={{{depName}}}@{{{replace '^[^\\d]*' '' currentValue}}} --to={{{depName}}}@{{{replace '^[^\\d]*' '' newValue}}}",
+          "npm install --ignore-scripts",
           "npx --no-install nx migrate --run-migrations",
           "rm -f migrations.json || true",
           "npx --no-install nx workspace-lint",
@@ -80,10 +81,11 @@
       "matchUpdateTypes": ["major", "minor", "patch", "pin"],
       "postUpgradeTasks": {
         "commands": [
-          "npm install --ignore-scripts",
+          "npm ci --ignore-scripts",
           "npm run prepare --if-present",
           "bash nx-create-migrations.sh",
           "npx --no-install nx migrate {{{depName}}} --from={{{depName}}}@{{{replace '^[^\\d]*' '' currentValue}}} --to={{{depName}}}@{{{replace '^[^\\d]*' '' newValue}}}",
+          "npm install --ignore-scripts",
           "npx --no-install nx migrate --run-migrations=migrations.json",
           "rm -f migrations.json || true",
           "npx --no-install nx workspace-lint",
