@@ -1,6 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "skipInstalls": false,
   "packageRules": [
     {
       "groupName": "Nrwl workspace",
@@ -53,7 +52,7 @@
       "matchUpdateTypes": ["major", "minor", "patch", "pin"],
       "postUpgradeTasks": {
         "commands": [
-          "npm ci --ignore-scripts",
+          "npm install --ignore-scripts",
           "npm run prepare --if-present",
           "bash nx-create-migrations.sh",
           "npx --no-install nx migrate {{{depName}}} --from={{{depName}}}@{{{replace '^[^\\d]*' '' currentValue}}} --to={{{depName}}}@{{{replace '^[^\\d]*' '' newValue}}}",
@@ -82,7 +81,7 @@
       "matchUpdateTypes": ["major", "minor", "patch", "pin"],
       "postUpgradeTasks": {
         "commands": [
-          "npm ci --ignore-scripts",
+          "npm install --ignore-scripts",
           "npm run prepare --if-present",
           "bash nx-create-migrations.sh",
           "npx --no-install nx migrate {{{depName}}} --from={{{depName}}}@{{{replace '^[^\\d]*' '' currentValue}}} --to={{{depName}}}@{{{replace '^[^\\d]*' '' newValue}}}",
