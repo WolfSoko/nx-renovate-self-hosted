@@ -20,6 +20,7 @@ jobs:
         env:
           NX_CLOUD_AUTH_TOKEN: ${{ secrets.NX_CLOUD_AUTH_TOKEN }}
           LOG_LEVEL: debug
+          RENOVATE_REUSE_PACKAGE_LOCK: false
         with:
           configurationFile: .github/renovate.config.js
           token: ${{ secrets.RENOVATE_SELF_HOSTED_TOKEN }}
