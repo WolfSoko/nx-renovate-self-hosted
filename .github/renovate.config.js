@@ -12,7 +12,6 @@ module.exports = {
     allowScripts: true,
     exposeAllEnv: true,
     allowPostUpgradeCommandTemplating: true,
-    skipInstalls: false,
     allowedPostUpgradeCommands: [
       '^npm ci --ignore-scripts$',
       '^npm install --ignore-scripts$',
