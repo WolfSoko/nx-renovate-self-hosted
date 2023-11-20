@@ -13,6 +13,7 @@ module.exports = {
     exposeAllEnv: true,
     allowPostUpgradeCommandTemplating: true,
     allowedPostUpgradeCommands: [
+      '^rm -f package-lock.json$',
       '^npm ci --ignore-scripts$',
       '^npm install --ignore-scripts$',
       '^npm run prepare --if-present$',
