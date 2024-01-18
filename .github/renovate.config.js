@@ -23,5 +23,6 @@ module.exports = {
       '^npx --no-install nx migrate',
       '^rm -f migrations.json$',
       '^npx --no-install nx run-many --target=lint --all --parallel --fix --skip-nx-cache$',
+      'rm -rf node_modules'
     ],
 };
