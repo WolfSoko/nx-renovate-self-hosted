@@ -21,6 +21,7 @@ jobs:
           NX_CLOUD_AUTH_TOKEN: ${{ secrets.NX_CLOUD_AUTH_TOKEN }}
           LOG_LEVEL: debug
           RENOVATE_REUSE_PACKAGE_LOCK: false
+          NODE_OPTIONS: "--max-old-space-size=4096"
         with:
           configurationFile: .github/renovate.config.js
           token: ${{ secrets.RENOVATE_SELF_HOSTED_TOKEN }}
