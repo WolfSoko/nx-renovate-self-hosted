@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
 
       - name: Self-hosted Renovate
-        uses: renovatebot/github-action@v40.1.11
+        uses: renovatebot/github-action@v40.1.12
         env:
           NX_CLOUD_AUTH_TOKEN: ${{ secrets.NX_CLOUD_AUTH_TOKEN }}
           LOG_LEVEL: debug
