@@ -3,7 +3,6 @@
   "extends": [
     "config:base",
     ":label(dependencies)",
-    "github>nx-squeezer/squeezer",
     ":assignee(WolfSoko)"
   ],
   "schedule": [
