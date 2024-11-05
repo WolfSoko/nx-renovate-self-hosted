@@ -11,10 +11,9 @@ How to use:
 {
    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
    "extends": [
-      "config:base",
+      "config:recommended",
       ":label(dependencies)",
-      "github>nx-squeezer/squeezer",
-      "github>nx-squeezer/squeezer:nrwlWorkspace",
+      "github>WolfSoko/nx-renovatre-self-hosted:nrwlWorkspace",
       ":assignee(WolfSoko)"
    ],
    "schedule": [
