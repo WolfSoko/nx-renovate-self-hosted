@@ -13,7 +13,7 @@ How to use:
    "extends": [
       "config:recommended",
       ":label(dependencies)",
-      "github>WolfSoko/nx-renovatre-self-hosted:nxMonorepo",
+      "github>WolfSoko/nx-renovate-self-hosted:nxMonorepo",
       ":assignee(WolfSoko)"
    ],
    "schedule": [
