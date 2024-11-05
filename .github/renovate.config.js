@@ -21,6 +21,7 @@ module.exports = {
       '^npx --no-install ng update (@[a-z0-9-~][a-z0-9-._~]*\\/)?[a-z0-9-~][a-z0-9-._~]* --from=\\d+\\.\\d+\\.\\d+ --to=\\d+\\.\\d+\\.\\d+ --migrate-only --allow-dirty --force$',
       '^npx --no-install ng lint --fix$',
       '^npx --no-install nx migrate',
+      '^npx nx format',
       '^rm -f migrations.json$',
       '^npx --no-install nx run-many --target=lint --all --parallel --fix --skip-nx-cache$',
       'rm -rf node_modules'
