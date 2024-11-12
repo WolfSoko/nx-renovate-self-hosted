@@ -1,5 +1,5 @@
 module.exports = {
-    repositories: ['WolfSoko/nx-renovate-self-hosted', 'WolfSoko/wol-sok-mono', 'WolfSoko/nx-clean', 'WolfSoko/nx-clean2'],
+    repositories: ['WolfSoko/nx-renovate-self-hosted', 'WolfSoko/wol-sok-mono', 'WolfSoko/nx-clean', 'WolfSoko/nx-clean2', 'WolfSoko/nx-mf'],
     branchPrefix: 'renovate-github/',
     dryRun: null,
     gitAuthor: 'Renovate Bot GitHub <bot@renovateapp.com>',
