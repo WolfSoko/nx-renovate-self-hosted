@@ -2,35 +2,35 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
-      "groupName": "Nx monorepo",
+      "groupName": "Nx monorepo: disable ts-node/jest/cypress/rxjs majors",
       "matchManagers": ["npm"],
       "matchPackagePatterns": ["^ts-node", "^zone\\.js", "^cypress$", "^jest", "@types/jest", "^ts-jest", "^rxjs"],
       "matchUpdateTypes": ["major"],
       "enabled": false
     },
     {
-      "groupName": "Nx monorepo",
+      "groupName": "Nx monorepo: disable typescript major/minor",
       "matchManagers": ["npm"],
       "matchPackagePatterns": ["^typescript"],
       "matchUpdateTypes": ["major", "minor"],
       "enabled": false
     },
     {
-      "groupName": "Nx monorepo",
+      "groupName": "Nx monorepo: disable tslib",
       "matchManagers": ["npm"],
       "matchPackagePatterns": ["^tslib"],
       "matchUpdateTypes": ["major", "minor", "patch"],
       "enabled": false
     },
     {
-      "groupName": "Nx monorepo",
+      "groupName": "Nx monorepo: Angular family (fix commits)",
       "matchManagers": ["npm"],
       "matchPackagePatterns": ["^@angular/", "^zone\\.js", "^@ngrx/", "^@ng-easy/", "^@nx-"],
       "matchUpdateTypes": ["major", "minor", "patch", "pin"],
       "semanticCommitType": "fix"
     },
     {
-      "groupName": "Nx monorepo",
+      "groupName": "Nx monorepo: Nx/schematics family (chore commits)",
       "matchManagers": ["npm"],
       "matchPackagePatterns": [
         "^@nrwl/",
@@ -47,14 +47,14 @@
       "semanticCommitType": "chore"
     },
     {
-      "groupName": "Nx monorepo",
+      "groupName": "Nx monorepo: ngx-deploy-npm (chore commits)",
       "matchManagers": ["npm"],
       "matchPackageNames": ["ngx-deploy-npm"],
       "matchUpdateTypes": ["major", "minor", "patch", "pin"],
       "semanticCommitType": "chore"
     },
     {
-      "groupName": "Nx monorepo",
+      "groupName": "Nx monorepo: Nx family migration postUpgradeTasks",
       "matchManagers": ["npm"],
       "matchPackagePatterns": ["^@nrwl/", "^@nx/", "^nx$", "^@nx-", "^@ng-easy/"],
       "matchFiles": ["package.json"],
@@ -74,7 +74,7 @@
       }
     },
     {
-      "groupName": "Nx monorepo",
+      "groupName": "Nx monorepo: Angular family migration postUpgradeTasks",
       "matchManagers": ["npm"],
       "matchPackageNames": [
         "@angular/cli",
